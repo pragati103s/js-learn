@@ -34,3 +34,36 @@ const myFunction = function(){
 }
 
 console.log(typeof bigNumber)
+
+// +============================ memories
+// two types : Stack ( primitive), when changes in it, changes done in a copy and get a copy of it
+//  heap(non primitive)  , when changes in it changes done in a original values
+
+let myYoutubeName = "knowledge for gis and it tools"
+let anothername = myYoutubeName
+// in this scenario, created two variables which have a saparate space in the memory
+// first pass the value of first varible , just get the copy of it 
+// means both variables having same value
+//  it means whatevere changes made in first variable or in second, change reflect only that
+//  not in both
+anothername = "pragati"
+console.log(myYoutubeName)   
+console.log(anothername);
+
+
+//  but in non primitive if two variables are created and havinve same object(value)
+// in memory variable have the reference of that object only
+//  if changes made using any of the varible in the object then the changes reflect in both the variables
+
+let userOne = {
+    email: "sdf@gmail.com",
+    upi: 2343443
+}
+
+let userTwo = userOne
+
+userTwo.email = "fxcv@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
